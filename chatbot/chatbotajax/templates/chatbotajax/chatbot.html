@@ -1,0 +1,28 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'chatbotajax/chatbot.css' %}">
+<link rel="stylesheet" href="{% static 'chatbotajax/chatbotanimate.css' %}">
+
+<body style="overflow: hidden">
+    <div id="chatbot-container">
+        <div id="chatbot-header-div" onclick="animateChatbot()">
+            <img id="chatbot-close" src="{% static 'chatbotajax/cross.svg' %}">
+            <p id="chatbot-text">Chatbot</p>
+        </div>
+        <div id="chatbot-messages-div">
+            <div id="chatbot-message-container">
+                <div class="chatbot-message">
+                    <div class="chatbot-messagesentfill">
+                        <p class="chatbot-sentmessage">h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="chatbot-input-div">
+            <input id="chatbot-input" type="text">
+        </div>
+    </div>
+<script src="{% static 'chatbotajax/sendmessage.js' %}"></script>
+<script src="{% static 'chatbotajax/eventListener.js' %}"></script>
+<script src="{% static 'chatbotajax/chatbotanimate.js' %}"></script>
+</body>
